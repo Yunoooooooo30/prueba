@@ -2,13 +2,13 @@ package com.unu.poo2.beans;
 
 public class Autor {
 	private String codigoAutor;
-	private String nacionalidad;
 	private String nombreAutor;
+	private String nacionalidad;
 	
-	public Autor(String codigoAutor, String nacionalidad, String nombreAutor) {
+	public Autor(String codigoAutor, String nombreAutor, String nacionalidad) {
 		this.codigoAutor = codigoAutor;
-		this.nacionalidad = nacionalidad;
 		this.nombreAutor = nombreAutor;
+		this.nacionalidad = nacionalidad;
 	}
 	
 	public String getCodigoAutor() {
@@ -17,18 +17,16 @@ public class Autor {
 	public void setCodigoAutor(String codigoAutor) {
 		this.codigoAutor = codigoAutor;
 	}
-	public String getNacionalidad() {
-		return nacionalidad;
-	}
-	public void setNacionalidad(String nacionalidad) {
-		this.nacionalidad = nacionalidad;
-	}
 	public String getNombreAutor() {
 		return nombreAutor;
 	}
 	public void setNombreAutor(String nombreAutor) {
 		this.nombreAutor = nombreAutor;
 	}
-	
-	
+	public String getNacionalidad() {
+		return nacionalidad;
+	}
+	public void setNacionalidad(String nacionalidad) {
+		this.nacionalidad = nacionalidad;
+	}
 }

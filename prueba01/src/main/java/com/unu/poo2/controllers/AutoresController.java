@@ -20,8 +20,22 @@ import com.unu.poo2.model.AutoresModel;
  */
 public class AutoresController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
+
     AutoresModel modelo = new AutoresModel();
+    
+    protected void processRequest1(HttpServletRequest request, HttpServletResponse response) {
+    	if(request.getParameter("op")==null) {
+    		listar(request, response);
+    		return;
+    	}
+    }
+    
+    private void listar1(HttpServletRequest request, HttpServletResponse response) 
+    		throws ServletException, IOException {
+    	request.setAttribute("listaAutores", modelo.listarAutores());
+    	request.getRequestDispatcher("/autores/listaAutores.jsp").forward(request, response);
+    }
+    
 	 protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 	 throws ServletException, IOException {
 		 response.setContentType("text/html;charset=UTF-8");

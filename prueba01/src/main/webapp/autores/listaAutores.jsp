@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>PAGINA AUTOR</title>
-
+Lista de autores
 <table id="tabla">
 	 <thead>
 		 <tr>
